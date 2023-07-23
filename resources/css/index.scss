@@ -1,0 +1,184 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+  margin: 0;
+  font-family: "Montserrat", system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.App nav {
+  text-align: center;
+}
+
+/* Styling for App component nav element anchor 
+tag and Course component nav element anchor tag */
+.App nav a,
+.mybooks-nav a,
+.journal-nav a {
+  padding: 20px 20px;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Styling for the Home component main div */
+.Page {
+  margin-top: 40px;
+  width: 100%;
+  height: 52px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 5px;
+  background-color: #D9D9D9;
+}
+
+// background-color: transparent;
+
+
+header {
+  margin: 0 8%;
+  padding: 0 0;
+
+
+
+  .icon {
+    gap: 15px;
+  }
+}
+
+main {
+  .textHome_addBook {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    background: #FDE300;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  }
+  .home_showcaseBooks {
+    margin: 0 auto;
+    padding: 0 30px;
+    /*рисуем черные рамки*/
+    /*подключаем сетку*/
+   display: grid;
+    /*формируем по 4 одинаковых строки и столбца*/
+    grid-template-columns: repeat(7, 200px);
+    grid-template-rows: repeat(7);
+  }
+  .home_showcaseBooks > * {
+    /*фоновый цвет*/
+    background-color: #ffffff;
+    /*скругление углов*/
+    border-radius: 5px;
+    /*расстояние от одной границы ячейки до другой*/
+    margin: 25px;
+  }
+  .home_anyBooks {
+    border: 2px solid #000;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  .home_imgAnyBooks {
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+    padding: 20px 35px 40px 55px;
+    position: relative;
+  }
+  .home_gridInsideAnyBooks {
+    padding: 10px 15px 15px 15px;
+  }
+  
+
+  .partOfTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+  }
+
+  .nameOfTable {
+    display: flex;
+    gap: 150px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #CCCCCC;
+
+  }
+
+  table {
+    border: 1px solid black;
+    display: table;
+    border-collapse: collapse;
+  }
+
+  .editTable {
+    background: #6D6D6D;
+    height: 68.46px;
+
+  }
+
+  tr {
+    border: 2px solid black;
+  }
+
+  td {
+    padding-right: 150px;
+    border: 1px solid black;
+
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+    z-index: 1;
+  }
+}
+
+// .footer {
+//   position: fixed;
+//   height: 160px;
+//   bottom: 0;
+
+//   .navigationOfHistory {
+//     display: flex;
+//     justify-content: space-around;
+//     max-width: 1920px;
+//     margin: 0 auto;
+//     padding: 0 657px;
+//   }
+
+//   .listOfNavigation {
+//     margin-top: 13px;
+//     display: flex;
+//     gap: 41px;
+//     position: absolute;
+//     z-index: 5;
+//     align-items: center;
+//   }
+// }
+
+// .GradPictures {
+//   gap: 11px;
+//   margin-bottom: 35px;
+// }
