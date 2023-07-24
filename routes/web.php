@@ -24,7 +24,7 @@ Route::get('/login', function () {
     return view('welcome');
 })->name('login');
 
-Route::middleware('jwt.auth')->group(function (){
+Route::middleware('auth:sanctum')->group(function (){
 
     Route::get(
         '/home',

@@ -25,7 +25,7 @@ const LoginForm = () => {
       .then(response => response.json())
       .then(data => {
         if (data.status == 200) {
-          console.log('ok');
+            console.log('ok');
 
           document.location.href = '/Oggylib/public/home';
 
