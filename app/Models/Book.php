@@ -30,6 +30,9 @@ class Book extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function booked(){
+        return $this->hasOne(Booking::class);
+    }
 
 
 

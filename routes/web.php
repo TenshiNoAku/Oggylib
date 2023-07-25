@@ -32,11 +32,4 @@ Route::middleware('auth:sanctum')->group(function (){
             return view('response');
         });
 });
-Route::post(
-    '/login',
-    [LoginController::class, "login"]
-);
 
-Route::get('/reading',function (){
-    echo bcrypt('admin');
-});

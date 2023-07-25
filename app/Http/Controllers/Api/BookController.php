@@ -22,29 +22,6 @@ use App\Models\User;
 class BookController extends Controller
 {
 
-    /**
-     * @param string $status
-     * @param BookService $service
-     * @return ResourceCollection
-     */
-    public function booksByStatus(string $status, BookService $service) : ResourceCollection //Todo: Move to UserController
-    {
-        $user = Auth::user();
-        $data = $service->getByStatus($user,$status);
-        return BookResource::collection($data);
-    }
-
-    /**
-     * @param BookService $service
-     * @return ResourceCollection
-     *
-     */
-    public function favorites(BookService $service) : ResourceCollection //Todo: Move to UserController
-    {
-        $user = Auth::user();
-        $data = $service->getFavourite($user);
-        return BookResource::collection($data);
-    }
 
     /**
      * @param int $page
@@ -74,7 +51,7 @@ class BookController extends Controller
      * @return void
      */
     public function destroy(int $id){
-         Book::find($id)->delete();
+         Book::findOrFail($id)->delete();
     }
 
     /**

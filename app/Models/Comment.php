@@ -11,6 +11,7 @@ class Comment extends Model
 
     protected $hidden = ['pivot','book_id','user_id'];
     public $timestamps=false;
+    protected $guarded =[];
     public function book(){
         return $this->belongsTo(Book::class);
     }

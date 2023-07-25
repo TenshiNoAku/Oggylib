@@ -18,6 +18,7 @@ class User extends Authenticatable
     protected $hidden = ['password','image','is_admin'];
     public $timestamps = false;
     protected $withCount = ['notifics'];
+    protected $with = ['notifics'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
