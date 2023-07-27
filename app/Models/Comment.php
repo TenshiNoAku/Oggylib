@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $hidden = ['pivot','book_id','user_id'];
+
     public $timestamps=false;
     protected $guarded =[];
     public function book(){

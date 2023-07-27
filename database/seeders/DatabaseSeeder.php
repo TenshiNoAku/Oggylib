@@ -13,6 +13,7 @@ use App\Models\Notification;
 use App\Models\Tag;
 use App\Models\User;
 use App\Models\UserBook;
+use App\Services\BookService;
 use Illuminate\Database\Seeder;
 use function Symfony\Component\Translation\t;
 
@@ -21,7 +22,7 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-    public function run(): void
+    public function run(BookService $service): void
     {
         // \App\Models\User::factory(10)->create();
 
@@ -52,10 +53,7 @@ class DatabaseSeeder extends Seeder
             $book->authors()->attach($author_id);
             $book->genres()->attach($genre_id);
             $book->tags()->attach($tags_id);
-            $rating = $book->comments()->avg('score');
-            if($rating){
-                $book->update(['rating'=> $rating]);
-            }
+            $service->refresh_rating($book);
 
 
         }

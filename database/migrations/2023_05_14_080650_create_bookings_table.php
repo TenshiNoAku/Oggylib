@@ -25,6 +25,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->date("booking_date");
             $table->date("return_date")->nullable();
+            $table->softDeletes();
         });
     }
 
@@ -34,5 +35,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('bookings');
+        Schema::table('bookings',function (Blueprint $table){
+            $table->dropSoftDeletes();
+        });
     }
 };

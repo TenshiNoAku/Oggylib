@@ -23,6 +23,7 @@ class UserBookFactory extends Factory
             'book_id'=>Book::all()->random(1)->pluck('id')[0],
             'status'=>$this->faker->randomElement(['reading','postponed','dropped','read']),
             'is_favourite'=>$this->faker->boolean(70),
+            'score'=>$this->faker->numberBetween(1,5),
         ];
     }
 }

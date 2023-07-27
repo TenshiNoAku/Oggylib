@@ -33,3 +33,7 @@ Route::middleware('auth:sanctum')->group(function (){
         });
 });
 
+Route::get('/test',function (){
+    dd(auth()->user());
+})->middleware(['auth:sanctum','admin']);;
+

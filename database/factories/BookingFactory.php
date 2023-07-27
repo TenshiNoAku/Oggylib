@@ -22,6 +22,7 @@ class BookingFactory extends Factory
             'user_id'=>User::all()->random(1)->pluck('id')[0],
             'book_id'=>$this->faker->unique()->randomElement(Book::all())->id,
             'booking_date'=>$this->faker->dateTimeBetween('now','now'),
+            'return_date'=>$this->faker->dateTimeBetween('+7 days','+7 days')
 
         ];
     }

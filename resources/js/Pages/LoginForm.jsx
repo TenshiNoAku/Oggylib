@@ -13,7 +13,7 @@ const LoginForm = () => {
       password: password
     };
 
-    fetch('/Oggylib/public/api/login', {
+    fetch('/Oggylib/public/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

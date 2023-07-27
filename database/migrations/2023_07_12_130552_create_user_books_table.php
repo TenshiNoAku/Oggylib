@@ -24,6 +24,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->enum('status',['reading','postponed','dropped','read']);
             $table->boolean('is_favourite')->default(0);
+            $table->unsignedTinyInteger("score")->nullable();
         });
     }
 

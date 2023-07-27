@@ -20,7 +20,7 @@ class CommentFactory extends Factory
     {
         return [
             'text'=>$this->faker->text,
-            'score'=>$this->faker->numberBetween(1,5),
+
             'user_id'=>User::all()->random(1)->pluck('id')[0],
             'book_id'=>Book::all()->random(1)->pluck('id')[0],
 

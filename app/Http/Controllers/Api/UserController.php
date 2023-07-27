@@ -27,8 +27,13 @@ class UserController extends Controller
         return new UserResource($request->user());
     }
 
-    public function reading() : ResourceCollection
+    public function destroy(User $user){
+        $user->delete();
+    }
+
+    public function reading()// : ResourceCollection
     {
+
         return BookResource::collection(auth()->user()->whereBookStatus('reading'));
     }
 

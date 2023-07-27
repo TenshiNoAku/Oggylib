@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("surname")->nullable();
             $table->string("password",64);
             $table->boolean("is_admin")->default(0);
+
         });
     }
 
@@ -27,5 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+
     }
 };
