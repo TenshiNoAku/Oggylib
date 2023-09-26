@@ -1,0 +1,128 @@
+.Register {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    &-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            padding-top: 48px;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 39.01px;
+            padding-bottom: 32px;
+        }
+    }
+}
+.Register-main__items {
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .item-lastname {
+        &__title {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30.48px;
+            padding-left: 10px;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 100%;
+            height: 56px;
+            font-size: 26px;
+            padding: 20px 10px;
+        }
+    }
+    .item-name {
+        &__title {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30.48px;
+            padding-left: 10px;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 100%;
+            height: 56px;
+            font-size: 26px;
+            padding: 20px 10px;
+        }
+    }
+    .item-login {
+        &__title {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30.48px;
+            padding-left: 10px;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 100%;
+            height: 56px;
+            font-size: 26px;
+            padding: 20px 10px;
+        }
+    }
+    .item-password {
+        &__title {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30.48px;
+            padding-left: 10px;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 100%;
+            height: 56px;
+            font-size: 26px;
+            padding: 20px 10px;
+        }
+    }
+    .item-confirmpassword {
+        &__title {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30.48px;
+            padding-left: 10px;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 100%;
+            height: 56px;
+            font-size: 26px;
+            padding: 20px 10px;
+        }
+    }
+}
+.Register-main__button {
+    margin-top: 84px;
+    width: 376px;
+    max-width: 100%;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    height: 84px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    &:active {
+        background-color: #f0b943be;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .button-text {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 30.48px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,192 @@
+.BookCard__wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 10px 0 10px;
+}
+
+.BookCard {
+    display: flex;
+    gap: 24px;
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.BookCard__img {
+    img {
+        @media (max-width: 1200px) {
+            max-width: 560px;
+        }
+        @media (max-width: 800px) {
+            max-width: 460px;
+        }
+        @media (max-width: 600px) {
+            max-width: 360px;
+        }
+        @media (max-width: 390px) {
+            max-width: 260px;
+        }
+    }
+    position: relative;
+}
+.BookCard__info {
+}
+.BookCard-score {
+    position: absolute;
+    right: 0;
+    margin: 10px 20px 0 0;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.BookCard__title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000;
+    text-overflow: ellipsis;
+    padding-bottom: 8px;
+    @media (max-width: 780px) {
+        font-size: 25px;
+    }
+}
+.BookCard__author {
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 8px;
+    @media (max-width: 780px) {
+        font-size: 20px;
+    }
+}
+.BookCard__genre {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 12px;
+}
+.BookCard__state {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    @media (max-width: 1200px) {
+        justify-content: center;
+    }
+}
+.BookCard__rating {
+    @media (max-width: 1200px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.BookCard__state-info {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 8px 30px;
+    border-radius: 30px;
+    background: #12ff0d;
+    margin-right: 10px;
+}
+.BookCard__annotation {
+    padding-top: 20px;
+}
+.BookCard__annotation-title {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 11px;
+}
+.BookCard__annotation-content {
+    font-size: 20px;
+    max-width: 856px;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 16px;
+}
+.BookCard__tags {
+    display: flex;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width: 1200px) {
+        justify-content: center;
+    }
+}
+.tag-card {
+    border-radius: 30px;
+    background: #fde300;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 8px 20px;
+}
+
+.BookCard__status {
+    padding: 21px 26px 21px 26px;
+    border-radius: 30px;
+    border: 2px solid #fde300;
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    @media (max-width: 1200px) {
+        margin: 0 auto;
+    }
+}
+.status {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.BookCard__status-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.Reservation {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 432px;
+    width: 100%;
+    padding: 25px 0 25px 0;
+}
+.Reservation-close {
+    border-radius: 30px;
+    background: #ccc;
+}
+
+.Reservation-open {
+    border-radius: 30px;
+    border: 1px solid #fffbfb;
+    background: #fde300;
+}

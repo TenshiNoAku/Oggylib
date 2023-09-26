@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Actions\BookAttachAction;
 use App\Http\Requests\BookStoreRequest;
+use App\Http\Requests\BookUpdateRequest;
 use App\Http\Resources\BookResource;
 use App\Models\Book;
 use App\Models\UserBook;
@@ -34,7 +35,7 @@ class BookService
         return $book;
     }
 
-    public function update(Book $book,BookStoreRequest $request,BookAttachAction $attachAction){
+    public function update(Book $book,BookUpdateRequest $request,BookAttachAction $attachAction){
         $request->validated();
         $book->update($request->only('name','description'));
         $book->authors()->detach();

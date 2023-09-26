@@ -8,17 +8,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\BookStoreRequest;
 use App\Http\Requests\BookUpdateRequest;
 use App\Http\Resources\BookResource;
-use App\Http\Resources\UserResource;
-
-use App\Models\Author;
 use App\Services\BookService;
-use Illuminate\Http\Request;
-
 use Illuminate\Http\Resources\Json\ResourceCollection;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Book;
-use App\Models\User;
-
+use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
@@ -75,8 +68,26 @@ class BookController extends Controller
         return BookResource::collection(Book::all());
     }
 
-    public function update(Book $book, BookStoreRequest $request, BookService $service, BookAttachAction $attachAction)
+    public function update(Book $book, BookUpdateRequest $request, BookService $service, BookAttachAction $attachAction)
     {
         $service->update($book, $request, $attachAction);
+    }
+
+    public function search(Request $request){
+        $query = Book::query();
+        if ($s = $request->input('s')){
+            $query->whereRaw("name LIKE '%".$s."%'");
+        }
+        $booksPerPage = 2;
+
+        $page = $request->input('page',1);
+        $totalPages = ceil($query->count()/$booksPerPage);
+        $result =  $query->offset(($page-1)*$booksPerPage)->limit($booksPerPage)->get();
+
+        return [
+            'data' => $result,
+            'page'=>$page,
+             'last_page' => $totalPages
+        ];
     }
 }

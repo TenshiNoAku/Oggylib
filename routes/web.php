@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\BookController;
 use PhpParser\Comment\Doc;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,25 @@ use PhpParser\Comment\Doc;
 
 
 
+
+Route::get('/registration', function () {
+    return view('registration');
+})->name('user.create');
+
+Route::get('/adminpanel', function () {
+    return view('admin');
+})->name('adminpanel');
+
+Route::get('/book', function () {
+    return view('book');
+})->name('book');
+Route::get('/mybook', function () {
+    return view('mybook');
+})->name('mybook');
+
+Route::get('/notifications', function () {
+    return view('notifics');
+})->name('notifics');
 
 Route::get('/login', function () {
     return view('welcome');

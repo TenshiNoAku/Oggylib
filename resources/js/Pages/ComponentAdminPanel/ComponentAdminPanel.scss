@@ -1,0 +1,56 @@
+.AdminPanel_wrapper {
+    width: 100%;
+}
+.AdminPanel {
+    display: flex;
+    height: 100%;
+}
+.AdminPanelMenu {
+    background: #9d9d9d;
+    max-width: 352px;
+}
+.AdminPanelMenu-item {
+    color: white;
+    display: flex;
+
+    gap: 8px;
+    padding: 16px 92px 0px 0px;
+    img {
+        padding-left: 16px;
+    }
+}
+.AdminPanelMenu-main {
+    display: flex;
+    flex-direction: column;
+}
+.AdminPanelMenu_items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.item-text-all {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px 220px 10px 100px;
+    opacity: 1;
+}
+.requests {
+    border-bottom: 0px;
+}
+.active-text {
+    border-bottom: 0px;
+    background: #878787;
+}
+.active {
+    border-bottom: 0px;
+}

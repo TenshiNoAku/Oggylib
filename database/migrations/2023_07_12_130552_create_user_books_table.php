@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_books', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger("book_id");
             $table->foreign('book_id')
                 ->references('id')
@@ -22,7 +23,7 @@ return new class extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-            $table->enum('status',['reading','postponed','dropped','read']);
+            $table->enum('status',['reading','postponed','dropped','read'])->nullable();
             $table->boolean('is_favourite')->default(0);
             $table->unsignedTinyInteger("score")->nullable();
         });

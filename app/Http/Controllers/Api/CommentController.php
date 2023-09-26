@@ -4,9 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CommentStoreRequest;
-use App\Models\Notification;
 use App\Services\BookService;
-use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Models\Book;
 
@@ -19,5 +17,6 @@ class CommentController extends Controller
         $credentials['book_id'] = $book->id;
         Comment::create($credentials);
         $service->refresh_rating($book);
+        return Comment::all();
     }
 }

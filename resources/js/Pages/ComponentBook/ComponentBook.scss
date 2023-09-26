@@ -1,0 +1,28 @@
+.Book {
+    display: flex;
+    border-top: 1px solid rgba(128, 128, 128, 0.582);
+    border-radius: 40px;
+
+    padding: 20px 30px 30px 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.38px;
+}
+.Book__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Book-img {
+    max-width: 140px;
+}
+.Book__score {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.Book__score-text {
+    @media (max-width: 543px) {
+        display: none;
+    }
+}

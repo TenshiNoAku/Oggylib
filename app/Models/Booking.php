@@ -14,7 +14,8 @@ class Booking extends Model
 
     protected $with=['user','book'];
     protected $guarded=[];
-
+    const DELETED_AT = 'return_date';
+    const CREATED_AT = 'booking_date';
     public function user(){
         return $this->belongsTo(User::class);
     }

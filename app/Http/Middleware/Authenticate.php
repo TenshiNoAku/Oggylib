@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Services\UserBookService;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;
 use Closure;
@@ -26,8 +27,9 @@ class Authenticate extends Middleware
             $request->headers->set('Authorization', 'Bearer ' . $jwt);
 
         }
-
+        
         $this->authenticate($request, $guards);
         return $next($request);
     }
+
 }

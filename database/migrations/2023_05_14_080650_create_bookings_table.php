@@ -23,9 +23,8 @@ return new class extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-            $table->date("booking_date");
-            $table->date("return_date")->nullable();
-            $table->softDeletes();
+            $table->timestamp("booking_date");
+            $table->softDeletes('return_date');
         });
     }
 

@@ -1,0 +1,47 @@
+.Notification {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1382px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 14.63px;
+    font-weight: 400;
+}
+.Notification__title {
+    text-align: start;
+    padding-bottom: 22px;
+    font-weight: 700;
+    line-height: 43.88px;
+    font-size: 32px;
+}
+.Notification__item {
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    padding-bottom: 10px;
+    font-size: 21px;
+    line-height: 29.26px;
+}
+.Notification-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+}
+.Notification-text {
+    padding-bottom: 16px;
+    padding-right: 15px;
+}
+.Notification__items {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.Notification-date {
+    text-align: end;
+    padding: 2px;
+}

@@ -1,0 +1,72 @@
+.MainBook__img {
+    max-width: 112px;
+}
+.MainBook {
+    padding: 16px 24px 8px 24px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ComponentMainBooks {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ComponentMain {
+    max-width: 1312px;
+    margin: 0 auto;
+}
+.MainBook__title {
+    max-width: 112px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.MainBook__author {
+    color: rgba(0, 0, 0, 0.45);
+    font-family: Montserrat;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.filter-settings {
+    position: absolute;
+}
+.filter-content {
+    position: relative;
+    display: flex;
+}
+.filter-content_item {
+    padding: 10px 0px;
+    min-width: 140px;
+    display: flex;
+    margin: 0 auto 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.Main__filter {
+    max-width: 1150;
+    margin: 0 auto;
+}
+.item_1 {
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+}
+.item_2 {
+    border-radius: 0px 0px 15px 15px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+}
+.filter-more {
+    display: flex;
+    flex-direction: column;
+}

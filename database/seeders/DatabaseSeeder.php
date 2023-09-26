@@ -24,21 +24,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run(BookService $service): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::create([
+            'name'=>'user',
+            'surname'=>'user',
+            'password'=>'$2a$10$y0I.ILAhqweZkontI4zUeeLKFSSW2eoHOx4YvGzHESXb4RvsAfsq.',
+            'email'=>'user@user.com',
+            'is_admin'=>0
+        ]);
         $books = Book::factory(100)->create();
         $authors = Author::factory(50)->create();
         $tags = Tag::factory(50)->create();
         $genres = Genre::factory(50)->create();
         $users = User::factory(15)->create();
         $comments = Comment::factory(150)->create();
-        Notification::factory(30)->create();
+        Notification::factory(50)->create();
         UserBook::factory(100)->create();
         Booking::factory(20)->create();
+
         User::create([
             'name'=>'admin',
             'surname'=>'admin',
@@ -46,6 +48,7 @@ class DatabaseSeeder extends Seeder
             'email'=>'admin@admin.com',
             'is_admin'=>1
         ]);
+
         foreach ($books as $book){
             $author_id = $authors->random(1)->pluck('id');
             $genre_id = $genres->random(1)->pluck('id');

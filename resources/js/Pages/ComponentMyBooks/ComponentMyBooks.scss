@@ -1,0 +1,42 @@
+.MyBooks__wrapper {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-top: 23px;
+}
+.MyBooks__menu {
+    display: flex;
+    gap: 160px;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30.48px;
+    @media (max-width: 1320px) {
+        gap: 120px;
+    }
+    @media (max-width: 1200px) {
+        gap: 100px;
+    }
+    @media (max-width: 1000px) {
+        gap: 60px;
+        font-size: 23px;
+    }
+    @media (max-width: 800px) {
+        gap: 30px;
+        font-size: 23px;
+    }
+    @media (max-width: 700px) {
+        gap: 15px;
+        font-size: 20px;
+    }
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
+}
+.active {
+    border-bottom: 2px solid black;
+    border-radius: 1px;
+    padding-bottom: 2px;
+}
+.MyBooks__content {
+    padding-top: 40px;
+}
