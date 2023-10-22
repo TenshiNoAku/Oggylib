@@ -16,8 +16,9 @@ class BookObserver
         $action = new URLTransliteAction;
         $transilteName = $action->handle($book->name);
         $book->update(['url'=>$transilteName]);
-        $image = QrCode::format('svg')->size(250)->generate("https://Oggylib.ru/books/{$transilteName}");
-        Storage::disk('local')->put("QRs/{$transilteName}.svg",$image);
+        
+        $image = QrCode::format('svg')->size(250)->generate("https://192.168.1.66/Oggylib/public/book/");
+        Storage::disk('local')->put("QRs/{$transilteName}2.svg",$image);
     }
 
     /**

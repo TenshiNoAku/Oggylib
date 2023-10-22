@@ -11,7 +11,6 @@
     @media (max-width: 1200px) {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 }
 
@@ -88,12 +87,11 @@
     align-items: center;
     padding-bottom: 12px;
     @media (max-width: 1200px) {
-        justify-content: center;
     }
 }
 .BookCard__rating {
     @media (max-width: 1200px) {
-        align-items: center;
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
     }
@@ -153,9 +151,6 @@
     background: #fff;
     width: 100%;
     max-width: 600px;
-    @media (max-width: 1200px) {
-        margin: 0 auto;
-    }
 }
 .status {
     font-size: 20px;
@@ -189,4 +184,155 @@
     border-radius: 30px;
     border: 1px solid #fffbfb;
     background: #fde300;
+}
+
+// .Book__comment {
+//     padding: 0px 10px;
+//     width: 100%;
+
+//     &_title {
+//         color: #000;
+//         font-family: Montserrat;
+//         font-size: 32px;
+//         font-style: normal;
+//         font-weight: 700;
+//         line-height: normal;
+//         padding-bottom: 32px;
+//         padding-top: 40px;
+//     }
+//     &_input {
+//         border-radius: 30px;
+//         border: 2px solid #bdbdbd;
+//         background: #fff;
+//         display: flex;
+//         align-items: flex-start;
+//         display: flex;
+//         overflow: inherit;
+//     }
+//     .comment_write {
+//         min-width: 100%;
+//         width: 1356px;
+//         resize: vertical;
+//         min-height: 100px;
+//     }
+//     button {
+//         align-items: center;
+//         img {
+//             max-width: 34px;
+//             max-height: 34px;
+//         }
+//     }
+// }
+.Book__comment {
+    max-width: 1356px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 32px;
+    margin-bottom: 40px;
+}
+
+.Book__comment_title {
+    color: #000;
+
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.Book__comment_input {
+    border-radius: 30px;
+    border: 2px solid #bdbdbd;
+
+    background: #fff;
+
+    color: #000;
+
+    font-family: Montserrat;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 425px) {
+        font-size: 14px;
+    }
+}
+
+.comment_write {
+    writing-mode: vertical-rl;
+
+    flex-grow: 1;
+    padding: 8px;
+
+    border-radius: 4px;
+    margin-right: 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-bottom: 100px;
+}
+
+.comment_send {
+    appearance: none;
+    background: none;
+    border: none;
+}
+
+.send-img {
+    width: 24px;
+}
+.commments-come {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Book__comments-come {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: normal;
+    padding-top: 32px;
+    max-width: 1326px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    border-radius: 30px;
+    border: 2px solid #bdbdbd;
+    padding-bottom: 7px;
+    padding-top: 7px;
+
+    background: #fff;
+    .Book__comments_title {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .Book__comments-text {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.4px;
+    }
+    .Book__comments-date {
+        color: #000;
+
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 }

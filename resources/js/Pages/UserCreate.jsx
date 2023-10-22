@@ -19,7 +19,7 @@ const Register = () => {
             password_conformation: Conformation,
         };
 
-        fetch("/Oggylib/public/api/user", {
+        fetch("/Oggylib/public/api/admin/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

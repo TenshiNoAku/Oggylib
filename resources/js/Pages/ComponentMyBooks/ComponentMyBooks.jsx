@@ -60,6 +60,15 @@ export const ComponentMyBooks = () => {
     const handleFilterClick = (Filter) => {
         setActiveFilter(Filter);
     };
+    function getData(status){
+        fetch(`/Oggylib/public/api/user/books/${status}`) //read reading dropped postponed
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data['data'][0]);
+            });
+    }
     return (
         <div className="MyBooks__wrapper">
             <ul className="MyBooks__menu">

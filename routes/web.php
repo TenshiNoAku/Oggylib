@@ -19,7 +19,9 @@ use Inertia\Inertia;
 */
 
 
-
+Route::get('/',function(){
+    return 'dskaldaskld';
+});
 
 Route::get('/registration', function () {
     return view('registration');

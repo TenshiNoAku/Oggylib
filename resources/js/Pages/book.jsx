@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LoginForm.scss";
+//import "./LoginForm.scss";
 import Home from "./Home";
 import ComponentHeaderLogo from "./ComponentHeaderLogo/ComponentHeaderLogo";
 import ComponentFooter from "./ComponentFooter/ComponentFooter.JSX";
@@ -17,9 +17,9 @@ const Book = () => {
             <ComponentHeader />
             {/* <ComponentMain /> */}
 
-            {/* <ComponentNotification />*/ }
+            {/* <ComponentNotification />*/}
 
-            { <ComponentBookCard /> }
+            {<ComponentBookCard />}
             <ComponentFooter />
         </div>
     );
